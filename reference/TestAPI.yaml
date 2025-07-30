@@ -156,15 +156,12 @@ components:
     User:
       title: User
       type: object
-      description: ''
-      examples:
-        - id: 142
-          firstName: Alice
-          lastName: Smith
-          email: alice.smith@gmail.com
-          dateOfBirth: '1997-10-31'
-          emailVerified: true
-          signUpDate: '2019-08-24'
+      x-stoplight:
+        id: b3cu0cryf9wnn
+      required:
+        - id
+        - firstName
+        - lastName
       properties:
         id:
           type: integer
@@ -179,33 +176,3 @@ components:
           type: string
           x-stoplight:
             id: 7jqxjs7zl2dv1
-        email:
-          type: string
-          format: email
-          x-stoplight:
-            id: chn5mfn81hj8i
-        dateOfBirth:
-          type: string
-          format: date
-          example: '1997-10-31'
-          x-stoplight:
-            id: 0lx54pcjuub5v
-        emailVerified:
-          type: boolean
-          description: Set to true if the user's email has been verified.
-          x-stoplight:
-            id: 6bbyt0ecbfkr9
-        createDate:
-          type: string
-          format: date
-          description: The date that the user was created.
-          x-stoplight:
-            id: xvuzazblu4b0p
-      required:
-        - id
-        - firstName
-        - lastName
-        - email
-        - emailVerified
-      x-stoplight:
-        id: 7g7mzyw2tal2q
